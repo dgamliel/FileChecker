@@ -1,0 +1,64 @@
+body {
+  background-color: #282c34;
+  padding: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+
+}
+
+.box{
+  transition: box-shadow .3s;
+  letter-spacing: -0.020em;
+  border-radius:10px;
+  border: 1px solid #f0f0f0;
+  background: #f0f0f0;
+  padding: 10px;
+  font-size: 1.2em;
+  text-indent: 20px;  
+}
+
+.box:hover {
+  box-shadow: 0 0 40px rgba(255,255,255,.2); 
+}
+
+.light{
+  display: block; height: 1px;
+    border: 0; border-top: 1px solid #f0f0f0;
+    margin: 1em 0; padding: 0;
+}
+
+@-webkit-keyframes mainscreen {
+  0%   {background-color: #03045e} 
+  12.5%  {background-color: #023e8a}
+  25%  {background-color: #0077b6} 
+  37.5%  {background-color: #0096c7}
+  50% {background-color: #00b4d8} 
+  62.5% {background-color: #48cae4}
+  75% {background-color: #90e0ef} 
+  87.5% {background-color: #ade8f4}
+  100% {background-color: #caf0f8}
+}
+
+@keyframes mainscreen {
+  0%   {background-color: #03045e} 
+  12.5%  {background-color: #023e8a}
+  25%  {background-color: #0077b6} 
+  37.5%  {background-color: #0096c7}
+  50% {background-color: #00b4d8} 
+  62.5% {background-color: #48cae4}
+  75% {background-color: #90e0ef} 
+  87.5% {background-color: #ade8f4}
+  100% {background-color: #caf0f8}
+}
+
+h1 {
+  font-family: 'Ubuntu';
+  color: #f0f0f0;
+  font-size: 2.4em;
+}
+
+h3 {
+  font-family: 'Ubuntu';
+  color: #f0f0f0;
+}

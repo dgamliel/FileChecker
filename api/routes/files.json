@@ -1,0 +1,37 @@
+[
+    {
+        "file": "PDF",
+        "grep": "255044462d",
+        "index": -1,
+        "severity": "medium",
+        "issues": "https://www.cvedetails.com/vulnerability-list/vendor_id-53/product_id-497/cvssscoremin-4/cvssscoremax-4.99/Adobe-Acrobat-Reader.html"
+    },
+    {
+        "file": "TAR",
+        "grep": "1f9d",
+        "index": -1,
+        "severity": "high",
+        "issues": "https://www.cvedetails.com/vulnerability-list/vendor_id-72/product_id-1394/GNU-TAR.html"
+    },
+    {
+        "file": "TAR",
+        "grep": "1fa0",
+        "index": -1,
+        "severity": "high",
+        "issues": "https://www.cvedetails.com/vulnerability-list/vendor_id-72/product_id-1394/GNU-TAR.html"
+    },
+    {
+        "file": "PNG",
+        "grep": "89504e470d0a1a0a",
+        "index": -1,
+        "severity": "low",
+        "issues": "https://www.cvedetails.com/vulnerability-list/vendor_id-7294/Libpng.html"
+    },
+    {
+        "file": "BZip",
+        "grep": "425a68",
+        "index": -1,
+        "severity": "medium",
+        "issues": "https://www.cvedetails.com/vulnerability-list/vendor_id-7294/Libpng.html"
+    }
+]

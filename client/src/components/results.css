@@ -1,0 +1,17 @@
+.low {
+    background: green;
+}
+
+.medium {
+    background: yellow;
+}
+
+.high {
+    background: red;
+}
+
+code {
+    background-color: #f0f0f0;
+    padding: 3px;
+    border-radius: 10%;
+}
