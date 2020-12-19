@@ -1,10 +1,8 @@
 import { React, useEffect, useState } from 'react';
 import { Jumbotron , Button, Form, Container, Spinner } from 'react-bootstrap';
 import Result from './components/results';
+import env from "react-dotenv";
 import './App.css';
-
-
-
 
 const App = () => {
 
@@ -27,8 +25,10 @@ const App = () => {
     const formData = new FormData();
     formData.append('upload', selectedFile, fileName);
 
+		console.log(`Sending info to ${env.API_URL}/upload`);
+
     setLoading(true);
-    fetch('http://localhost:9000/upload', {
+    fetch(`${env.API_URL}/upload`, {
       method: 'POST',
       body: formData
     })
@@ -44,7 +44,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    fetch('http://localhost:9000/testAPI')
+    fetch(`${env.API_URL}/testAPI`)
     .then(res => res.text())
     .then(res => setContent(res));
   }, []);
