@@ -43,11 +43,6 @@ const App = () => {
     setFileName(e.target.files[0].name);
   }
 
-  useEffect(() => {
-    fetch(`${env.API_URL}/testAPI`)
-    .then(res => res.text())
-    .then(res => setContent(res));
-  }, []);
 
   return (
     <>
