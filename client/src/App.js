@@ -66,7 +66,7 @@ const App = () => {
         </Form>
 
         <div style={loading === true ? center : displayNone }>
-          <Spinner animation="border"/>
+          <Spinner variant="light" animation="border"/>
         </div>
         
       </Container>
