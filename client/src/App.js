@@ -12,6 +12,7 @@ const App = () => {
   const [selectedFile, setFile]     = useState(null);
   const [loading, setLoading]       = useState(false);
   const [resInfo, setResInfo]       = useState([]);
+  const [detected, setDetected]     = useState(null);
 
   const displayNone = {display: 'none'};
   const center      = {display: 'flex', justifyContent: 'center'};
@@ -33,8 +34,13 @@ const App = () => {
       body: formData
     })
     .then(res => res.json())
-    .then(res => setResInfo(res))
-    .then((res) => setLoading(false))
+    .then(res => {
+      setResInfo(res);
+      setLoading(false);
+
+      var wasDetected = res.length > 0;
+      setDetected(wasDetected);
+    })
     .catch(err => console.error(err));
   }
 
@@ -43,10 +49,8 @@ const App = () => {
     setFileName(e.target.files[0].name);
   }
 
-
   return (
     <>
-      
 
       <Container>
         <h1>File Analyzer</h1>
@@ -72,9 +76,18 @@ const App = () => {
         </div>
       </Container>
 
+      <Container>
+        <h3 className={detected === false ? 'nothing-found' : 'none'}>
+          No files found, you're all good! {detected}
+        </h3>
+      </Container>
+
+
       {resInfo.map( (info, i) => <Result key={i} info={info}/>)}
       
-      <Container style={{marginTop: '40px'}}>
+      <Container style={{marginTop: '40px'}}
+       className={detected === true ? '' : 'none'}
+      >
         <h3>
           What are embedded files? 
         </h3>
@@ -86,7 +99,9 @@ const App = () => {
         </div>
       </Container>
 
-      <Container style={{marginTop: '40px'}}>
+      <Container style={{marginTop: '40px'}}
+       className={detected === true ? '' : 'none'}
+      >
         <h3 style={{textAlign: 'right '}}>
           I found some embedded files, is my life over? 
         </h3>
